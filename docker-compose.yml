@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  mycrud:
+    container_name: mycrud_app
+    build: .
+    command: yarn dev
+    ports:
+      - "3001:3001"
+    volumes:
+      - .:/usr/app
+    environment:
+      - NODE_ENV=development
